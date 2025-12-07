@@ -20,7 +20,7 @@ The scope of this analysis encompasses:
     * **Wake Topology:** Visualizing recirculation zones and vortex shedding mechanisms.
 
 ## 🛠️ Methodology
-* **Velocity Inlet:** $33.33~m/s$ ($120~km/h$)
+* **Velocity Inlet:** 120kmph
 * **Ground Condition:** Moving Wall (Translational)
 * **Wheel Boundary:** Rotating Wall (Tangential Velocity $\omega = 111.1~rad/s$)
 * **Fluid Properties:** Incompressible Air ($\rho = 1.225~kg/m^3$)
