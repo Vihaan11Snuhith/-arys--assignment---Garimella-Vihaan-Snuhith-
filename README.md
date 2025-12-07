@@ -1,35 +1,34 @@
-# 🏍️ Project Aero: Making Bikes Faster & Safer
+# Computational Fluid Dynamics Investigation of Motorcycle Aerodynamics
 
-![CFD](https://img.shields.io/badge/Simulation-Ansys-orange)
-![Design](https://img.shields.io/badge/Design-Fusion_360-blue)
-![Speed](https://img.shields.io/badge/Speed-120_km%2Fh-red)
-
-**Assignment:** Arys Garage Engineering Challenge  
 **Candidate:** Garimella Vihaan Snuhith  
+**Assignment:** Section B - Option A (External Aerodynamics)  
 
 ---
 
-## 🚀 What is this?
-This project answers one question: **How do we keep a motorcycle stable at high speeds?**
+## 🎯 Project Scope & Objectives
 
-I designed a custom fairing in **Fusion 360** and tested it in a virtual wind tunnel using **Ansys Fluent**. The goal was to make the bike slice through the air cleanly while keeping the front wheel glued to the road.
+This project entails a steady-state Computational Fluid Dynamics (CFD) investigation into the external aerodynamics of a high-performance motorcycle fairing. The primary objective is to validate a "Blockage Model" geometry designed to minimize aerodynamic drag while enhancing vehicle stability at cruising velocities.
 
-## 💥 The Results (The Cool Stuff)
-I ran the simulation at **120 km/h**, and here is what happened:
+The scope of this analysis encompasses:
 
-* ✅ **It Cuts Drag:** The design is highly efficient, matching professional touring bikes.
-* ✅ **It Generates Downforce:** Unlike most basic designs that lift off the ground, **my design pushes down (-19N)**. This gives the rider better grip and steering control.
-* ✅ **It's Stable:** I mapped the airflow and found exactly where the wind turbulence happens (behind the windshield), so I know how to fix it in version 2.0.
+1.  **Geometric Modeling:** Development of a parametric CAD model in **Autodesk Fusion 360** representing the frontal area and bluff-body characteristics of a sport motorcycle, featuring a parabolic nose and windshield assembly.
+2.  **Flow Domain Discretization:** Generation of a hybrid unstructured mesh with high-fidelity boundary layer resolution (inflation layers targeting $y+ \approx 30$) to accurately capture near-wall flow physics.
+3.  **Physics Simulation:** Execution of a 2D steady-state RANS (Reynolds-Averaged Navier-Stokes) simulation using **Ansys Fluent**. The **$k-\omega$ SST** turbulence model was selected to resolve flow separation under adverse pressure gradients.
+4.  **Performance Quantification:** Evaluation of key aerodynamic coefficients, including:
+    * **Drag Force ($F_d$):** Assessing the efficiency of the fairing shape.
+    * **Lift Force ($F_l$):** Analyzing vertical forces for high-speed stability (Downforce vs. Lift).
+    * **Wake Topology:** Visualizing recirculation zones and vortex shedding mechanisms.
 
-## 📂 What's Inside?
-* **3D Models:** The actual CAD files of the bike.
-* **Simulation Data:** The proof that the physics works.
-* **The Report:** A full PDF explaining every step.
-* **Cool Pictures:** Colorful airflow visualizations in the `/Images` folder.
+## 🛠️ Methodology
+* **Velocity Inlet:** $33.33~m/s$ ($120~km/h$)
+* **Ground Condition:** Moving Wall (Translational)
+* **Wheel Boundary:** Rotating Wall (Tangential Velocity $\omega = 111.1~rad/s$)
+* **Fluid Properties:** Incompressible Air ($\rho = 1.225~kg/m^3$)
 
-## 🤖 AI Note
-* **Text:** I used AI to help format the report and make it look professional.
-* **Engineering:** The 3D modeling, the simulation setup, and the physics analysis were **100% done by me**.
+## 📊 Key Results
+The simulation validated the design efficiency, yielding a total drag force of **203.6 N** and a net downforce of **-19.2 N**, confirming the effectiveness of the fairing geometry in suppressing front-end lift.
 
 ---
-*Ready to race! 🏁*
+## 🤖 AI Usage Declaration
+* **Documentation:** Gemini LLM was utilized to structure the technical report and refine engineering terminology.
+* **Engineering:** All CAD modeling, mesh generation, physics setup, and post-processing were performed manually by the candidate.
